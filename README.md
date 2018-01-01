@@ -4,6 +4,8 @@ This Angular 4 project was generated with [Angular CLI](https://github.com/angul
 
 This is just a test for showing ORACC data on a search table, and more tests using other components can be found in different branches.
 
+* https://l-lin.github.io/angular-datatables/#/getting-started
+
 ## Install requirements
 
 ### npm
