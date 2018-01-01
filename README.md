@@ -2,30 +2,46 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
-## Serve the data with json-server in localhost:3000 so it's accessible from the table:
+## Install requirements
 
+Go to project root directory and run
+
+```
+npm install
+```
+
+to get all the dependencies set up. These are listed in `package.json`.
+
+### npm
+
+
+### Angular CLI
+
+
+### json-server
+
+We need to serve the data with json-server in localhost:3000 so it's accessible from the table.
+This is temporary until we get the ElasticSearch/Flask-Restful backend ready.
+
+To run json-server:
 ```
 json-server --watch src/assets/data/entries_db.json &
 ```
 
-Note it might be that it's not enough with `npm install` and it needs to be uninstalled locally, then installed globally: 
+Note it might be that it's not enough with `npm install` and it needs to be uninstalled locally, then installed globally:
 
 ```
 npm uninstall json-server
 npm install json-server [--save] -g
 ```
 
+### yarn
 
-
-## Requirements
-
-Run
+In Mac OS:
 
 ```
-npm install
+brew install yarn
 ```
-
-to get all the dependencies set up.
 
 ## Development server
 
