@@ -2,12 +2,15 @@
 export const LANG_AR_NAME = 'ar';
 
 export const LANG_AR_TRANS = {
-    // Translations for the the search table
-    'search.guideword': 'guide word (ar)',
-    'search.headword': 'headword (ar)',
-    'search.icount': 'count (ar)',
+    // Translations for the the search tables
+    'search.guideword': 'translation (ar)',
+    'search.headword': 'ancient word (ar)',
+    'search.icount': 'hits (ar)',
     'search.periods': 'language and periods (ar)',
     'search.meanings': 'meanings (ar)',
+    // And specifically for the simple results table
+    'display.instructions': 'Enter a query to search for. You can sort the results by clicking on the column headings.',
+    'display.button_msg': 'بحث',
     // Translations for the help page
     'help.title': 'مساعد',
     'help.intro': 'يمكنك البحث في محتويات Oracc بطريقتين مختلفتين:',
@@ -25,4 +28,5 @@ export const LANG_AR_TRANS = {
     // Translations for the home page
     'welcome.title': 'أهلا بك',
     'welcome.text': `Oracc هو جهد تعاوني لتطوير مجموعة كاملة من المسمارية التي تدعم التعليقات التوضيحية الغنية والترخيص المفتوح الجيل القادم من الأبحاث العلمية. ابتكر من قبل ستيف تيني ، Oracc يديرها جيمي نوفوتني ، إليانور روبسون ، تيني ، ونيك فيلدهويس.`,
+    'welcome.instructions': `من الروابط أعلاه ، يمكنك البحث في Oracc glossary للعثور على الكلمات ذات الاهتمام. يمكنك أيضًا استعراض المجموعة بأكملها (ولكن يتم تحذيرك من أن هذا بطيء بسبب الحجم الكبير للبيانات). انقر فوق عنوان التعليمات إذا كنت بحاجة إلى مزيد من الإرشادات. في المستقبل ، سوف تتمكن من البحث في مجموعة صفحات Oracc بأكملها للحصول على معلومات تاريخية وثقافية ، بالإضافة إلى المسارد.`,
 };

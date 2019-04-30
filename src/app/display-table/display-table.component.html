@@ -1,0 +1,54 @@
+<div class="container">
+  <p>{{"display.instructions" | translate}}</p>
+  <div class="row">
+    <div class="search-row">
+      <div id="search-bar" >
+        <input type="text" name="search" (keyup.enter)="searchWord()" [(ngModel)]="query">
+      </div>
+      <div id="search-button">
+        <button mat-stroked-button (click)="searchWord()">{{"display.button_msg" | translate}}</button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th (click)="sort('cf')">{{ "search.headword" | translate }}
+            <span class="glyphicon sort-icon" *ngIf="key =='cf'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th (click)="sort('gw')">{{ "search.guideword" | translate }}
+            <span class="glyphicon sort-icon" *ngIf="key =='gw'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th (click)="sort('icount')">{{ "search.icount" | translate }}
+            <span class="glyphicon sort-icon" *ngIf="key =='icount'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+          </th>
+          <th>{{ "search.meanings" | translate }}</th>
+          <th>{{ "search.periods" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of entries | filter:filter | paginate: { itemsPerPage: 10, currentPage: p }; let i = index"
+        (click)="clicked(entry)" class="table-row">
+          <td>{{entry.cf}}</td>
+          <td>{{entry.gw}}</td>
+          <td align="right">{{entry.icount}}</td>
+          <td>
+            <span *ngFor="let mng of entry.senses_mng; let isLast = last">
+              {{mng}}{{isLast ? '' : ', ' }}
+            </span>
+          </td>
+          <td>
+            <span class="language" title={{codeToName(entry.lang)}}>
+              {{entry.lang}}
+            </span>;
+            <span *ngFor="let period of entry.periods_p; let isLast = last">
+              {{period}}{{isLast ? '' : ', ' }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
